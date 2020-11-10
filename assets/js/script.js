@@ -4,3 +4,8 @@
 
 //TEXT INPUT for events during the day
 //ADD text to local storage with save button.
+
+//Testing
+//====
+//Put a console.log on button to test "click."
+//Event delegation to click any "save" button.
