@@ -1,6 +1,6 @@
-//CURRENT day displayed (moment.js)
-var currentDate = moment().format("MMMM Do,YYYY");
-$("#currentDay").text(currentDate);
+//Current date displayed in Jumbotron
+var today = moment().format("MMMM Do,YYYY");
+$("#currentDay").text(today);
 
 //DISPLAY current time, past time & future of a normal work day.
 
