@@ -37,18 +37,21 @@ function changeColor(element, color) {
 //Saves the user's input to local storage.
 function saveSchedule() {
   //Grabs the users input into the schedule.
-  const userSchedule = document.getElementsByClassName("col-10").val;
+  const userSchedule = document.getElementById("9").value;
   console.log(userSchedule);
 
+  let entry = { userSchedule: userSchedule };
+
   //Saves to local storage.
-  localStorage.setItem("saveToLocal", JSON.stringify(userSchedule));
+  localStorage.setItem("saveToLocal", JSON.stringify(entry));
 }
 
 function loadSchedule() {
   //Loads the user's input from local storage.
   let storedSchedule = localStorage.getItem("saveToLocal");
-  let scheduleEntry = JSON.parse(storedSchedule);
-  document.getElementsByClassName("col-18").innerHTML = scheduleEntry;
+  let scheduleParse = JSON.parse(storedSchedule);
+  let scheduleEntry = scheduleParse.userSchedule;
+  document.getElementById("9").innerHTML = scheduleEntry;
 }
 
 //Combines my local storage functions into one to be used in one button click.
