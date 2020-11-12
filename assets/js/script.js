@@ -34,7 +34,30 @@ function changeColor(element, color) {
   element.style.backgroundColor = color;
 }
 
-//Saving "textarea" to local storage
+//Saves the user's input to local storage.
+function saveSchedule() {
+  //Grabs the users input into the schedule.
+  const userSchedule = document.getElementsByClassName("col-10").val;
+  console.log(userSchedule);
+
+  //Saves to local storage.
+  localStorage.setItem("saveToLocal", JSON.stringify(userSchedule));
+}
+
+function loadSchedule() {
+  //Loads the user's input from local storage.
+  let storedSchedule = localStorage.getItem("saveToLocal");
+  let scheduleEntry = JSON.parse(storedSchedule);
+  document.getElementsByClassName("col-18").innerHTML = scheduleEntry;
+}
+
+//Combines my local storage functions into one to be used in one button click.
+function addToSchedule() {
+  saveSchedule();
+  loadSchedule();
+}
+
+document.getElementById("9amBtn").addEventListener("click", addToSchedule);
 
 // $("#9").html();
 // localStorage.setItem();
