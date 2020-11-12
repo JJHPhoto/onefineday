@@ -8,8 +8,10 @@ The next thing I did was connect my HTML with the CSS style sheet provided by Tr
 
 After that, I also looked up a few things online that were more specific to what I wanted to do. Maybe I'm getting better at Google, but I was able to find some very good code online that was similiar enough to my work that I could modify it to work for me.
 
-At this point, I was happy to take on the most difficult part: local storage.
+At this point, I was happy to take on the most difficult part: local storage. After a bit of work, I was able to reuse some code from a previous homework assignment and class activities to get my input saved to local storage, parsed it and retrieved it out of local storage. I ran into issues trying to save those inputs to the page.
 
 ## 2. Resources
 
 [Stack Overflow](https://stackoverflow.com/questions/59995703/trying-to-change-background-color-based-off-if-the-hour-is-in-the-past-current)
+
+My study group.

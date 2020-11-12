@@ -40,6 +40,7 @@ function saveSchedule() {
   const userSchedule = document.getElementById("9").value;
   console.log(userSchedule);
 
+  //Adds a key to my userSchedule that I can get value from.
   let entry = { userSchedule: userSchedule };
 
   //Saves to local storage.
@@ -51,6 +52,7 @@ function loadSchedule() {
   let storedSchedule = localStorage.getItem("saveToLocal");
   let scheduleParse = JSON.parse(storedSchedule);
   let scheduleEntry = scheduleParse.userSchedule;
+  console.log(scheduleEntry);
   document.getElementById("9").innerHTML = scheduleEntry;
 }
 
@@ -60,15 +62,37 @@ function addToSchedule() {
   loadSchedule();
 }
 
-document.getElementById("9amBtn").addEventListener("click", addToSchedule);
+//Testing from class activites
 
-// $("#9").html();
-// localStorage.setItem();
+// Not sure if this works
+// document.getElementById("9amBtn").addEventListener("click", addToSchedule);
 
-//TEXT INPUT for events during the day
-//ADD text to local storage with save button.
-
-//Testing
+// reload = function () {
+//   let nineAM = localStorage.getItem("saveToLocal");
+//   if (nineAM !== null) {
+//     $("saveToLocal").text(JSON.parse(saveToLocal));
+//   }
+// };
 //====
-//Put a console.log on button to test "click."
+// var saveButton = document.querySelector("#9amBtn");
+
+// saveButton.addEventListener ("click", function (event) {
+//   event.preventDefault();
+
+//   var nineSched = document.querySelector("#9").value;
+
+// })
+// if (
+//   !localStorage.getItem("saveToLocal") ||
+//   JSON.parse(localStorage.getItem("saveToLocal")).length === 0
+// ) {
+//   $window.localStorage.setItem(
+//     "saveToLocal",
+//     JSON.stringify($scope.saveToLocal)
+//   );
+// }
+
+//To do
+//====
 //Event delegation to click any "save" button.
+//Get text from local storage to stay on page.
