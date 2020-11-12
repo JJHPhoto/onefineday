@@ -4,18 +4,16 @@ let timeNow = moment().format("H");
 console.log(timeNow);
 let nine = $("#9").val();
 console.log(nine);
-const savedText = document.getElementsByClassName("col-10");
-console.log(savedText);
+const scheduleText = document.getElementsByClassName("col-10");
+console.log(scheduleText);
 // const rowColor = document.getElementsByClassName("hour");
 // let cycleThrough;
 
 //Current date displayed in Jumbotron
 $("#currentDay").text(today);
 
-//Saving "textarea" to local storage
-
 //Changes the color of the row in the schedule based on time of day.
-Array.from(savedText).forEach((row) => {
+Array.from(scheduleText).forEach((row) => {
   let rowIdString = row.id,
     rowHour;
   if (rowIdString) {
@@ -23,10 +21,10 @@ Array.from(savedText).forEach((row) => {
   }
   if (rowHour) {
     if (timeNow === rowHour) {
-      setColor(row, "red");
-    } else if (timeNow < rowHour && timeNow > rowHour - 6) {
+      setColor(row, "blue");
+    } else if (timeNow < rowHour && timeNow > rowHour - 12) {
       setColor(row, "#77dd77");
-    } else if (timeNow > rowHour && timeNow < rowHour + 6) {
+    } else if (timeNow > rowHour && timeNow < rowHour + 12) {
       setColor(row, "#d3d3d3");
     } else {
       setColor(row, "#ff6961");
@@ -37,6 +35,8 @@ Array.from(savedText).forEach((row) => {
 function setColor(element, color) {
   element.style.backgroundColor = color;
 }
+
+//Saving "textarea" to local storage
 
 // $("#9").html();
 // localStorage.setItem();
