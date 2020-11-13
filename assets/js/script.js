@@ -62,37 +62,6 @@ function addToSchedule() {
   loadSchedule();
 }
 
-//Testing from class activites
+loadSchedule();
 
-// Not sure if this works
-// document.getElementById("9amBtn").addEventListener("click", addToSchedule);
-
-// reload = function () {
-//   let nineAM = localStorage.getItem("saveToLocal");
-//   if (nineAM !== null) {
-//     $("saveToLocal").text(JSON.parse(saveToLocal));
-//   }
-// };
-//====
-// var saveButton = document.querySelector("#9amBtn");
-
-// saveButton.addEventListener ("click", function (event) {
-//   event.preventDefault();
-
-//   var nineSched = document.querySelector("#9").value;
-
-// })
-// if (
-//   !localStorage.getItem("saveToLocal") ||
-//   JSON.parse(localStorage.getItem("saveToLocal")).length === 0
-// ) {
-//   $window.localStorage.setItem(
-//     "saveToLocal",
-//     JSON.stringify($scope.saveToLocal)
-//   );
-// }
-
-//To do
-//====
-//Event delegation to click any "save" button.
-//Get text from local storage to stay on page.
+document.getElementById("9amBtn").addEventListener("click", addToSchedule);
