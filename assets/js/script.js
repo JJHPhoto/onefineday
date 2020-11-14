@@ -1,11 +1,11 @@
 // Global Variables.
 let today = moment().format("MMMM Do, YYYY");
 let timeNow = moment().format("H");
-console.log(timeNow);
+// console.log(timeNow);
 let nine = $("#9").val();
-console.log(nine);
+// console.log(nine);
 const scheduleText = document.getElementsByClassName("col-10");
-console.log(scheduleText);
+// console.log(scheduleText);
 
 //Current date displayed in Jumbotron
 $("#currentDay").text(today);
@@ -19,7 +19,7 @@ Array.from(scheduleText).forEach((row) => {
   }
   if (rowSchedule) {
     if (timeNow === rowSchedule) {
-      changeColor(row, "blue");
+      changeColor(row, "ff6961");
     } else if (timeNow < rowSchedule && timeNow > rowSchedule - 12) {
       changeColor(row, "#77dd77");
     } else if (timeNow > rowSchedule && timeNow < rowSchedule + 12) {
@@ -34,13 +34,12 @@ function changeColor(element, color) {
   element.style.backgroundColor = color;
 }
 
-//Saves the user's input to local storage.
 function saveSchedule() {
   //Grabs the users input into the schedule.
   const userSchedule = document.getElementById("9").value;
   console.log(userSchedule);
 
-  //Adds a key to my userSchedule that I can get value from.
+  //Creates key for local storage.
   let entry = { userSchedule: userSchedule };
 
   //Saves to local storage.
@@ -52,7 +51,6 @@ function loadSchedule() {
   let storedSchedule = localStorage.getItem("saveToLocal");
   let scheduleParse = JSON.parse(storedSchedule);
   let scheduleEntry = scheduleParse.userSchedule;
-  console.log(scheduleEntry);
   document.getElementById("9").innerHTML = scheduleEntry;
 }
 
