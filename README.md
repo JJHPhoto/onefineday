@@ -17,3 +17,21 @@ I really wanted to put all of the buttons and localStorage into a cleaner functi
 ## 2. Resources
 
 [Stack Overflow](https://stackoverflow.com/questions/59995703/trying-to-change-background-color-based-off-if-the-hour-is-in-the-past-current)
+
+## 3. Screenshot of working application
+
+### Beginning page
+
+![Image](./assets/images/HW5-SS-1.jpg)
+
+### Entering Information
+
+![Image](./assets/images/HW5-SS-2.jpg)
+
+### Saving to localStorage
+
+![Image](./assets/images/HW5-SS-3.jpg)
+
+### Check to make sure inputs stay on page after reload.
+
+![Image](./assets/images/HW5-SS-4.jpg)
