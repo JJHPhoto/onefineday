@@ -10,8 +10,10 @@ After that, I also looked up a few things online that were more specific to what
 
 At this point, I was happy to take on the most difficult part: local storage. After a bit of work, I was able to reuse some code from a previous homework assignment and class activities to get my input saved to local storage, parsed it and retrieved it out of local storage. I ran into issues trying to save those inputs to the page. It turns out I was forgetting to call my function. With that issue discovered, I could move on to finishing up my code.
 
+The last thing to do was get localStorage working on each of my buttons. I ran into a weird error that took a few days to figure out. It was related to if I had localStorage from previous sessions. It took some debugging but by putting my parse into an "if" statement it would work.
+
+I really wanted to put all of the buttons and localStorage into a cleaner function process, but I wasn't getting the concepts of how to do that. I decided to submit this as is rather than fall further behind.
+
 ## 2. Resources
 
 [Stack Overflow](https://stackoverflow.com/questions/59995703/trying-to-change-background-color-based-off-if-the-hour-is-in-the-past-current)
-
-My study group.
